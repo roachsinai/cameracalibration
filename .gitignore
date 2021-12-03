@@ -40,3 +40,7 @@ build/
 *.cpp.tu*
 calib
 camera_matrix.yaml
+
+# Windows
+Debug/
+Release/

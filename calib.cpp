@@ -15,7 +15,7 @@ int main(int argc, char** argv) {
 	std::vector<cv::Mat> images;
 	for (const auto& entry: std::filesystem::directory_iterator(path)) {
 		std::cerr<<"Reading file: "<<entry.path()<<std::endl;
-		image=cv::imread(entry.path());
+		image=cv::imread(entry.path().string());
 		images.push_back(image);
 	}
 	if (images.empty()) { std::cerr<<"No files found."<<std::endl; return -1; }
